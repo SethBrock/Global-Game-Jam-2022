@@ -432,7 +432,9 @@
                             "These poor dark\nand light\ndenizens...",
                             "They disappear\nwhen they enter\n",
                             "their respective\nzone...",
-                            "There must be a\nway to help them!"
+                            "There must be a\nway to help them!",
+                            "(Don't forget to\npress A or Z on\nthe keyboard",
+                            "to talk to people\nand interact with\nobjects)"
                         ],
                         "avatarId": ""
                     }
@@ -466,7 +468,7 @@
                                 "text": [
                                     "You're in the dark\nzone, bud...",
                                     "That means you can\nsee us light folk!",
-                                    "I'm a round boy so\nI can be pushed...",
+                                    "I'm a round boy so\nI can be moved...",
                                     "Doesn't mean I\nlike it, though..."
                                 ],
                                 "avatarId": ""
@@ -594,7 +596,7 @@
                                 "text": [
                                     "You're in the\nlight zone, bud...",
                                     "That means you can\nsee us dark folk!",
-                                    "I'm a round boy so\nI can be pushed...",
+                                    "I'm a round boy so\nI can be moved...",
                                     "Doesn't mean I\nlike it, though..."
                                 ],
                                 "avatarId": ""
@@ -749,7 +751,7 @@
                                 ],
                                 "false": [
                                     {
-                                        "id": "d02a248f-d304-4d99-9490-0f7b6c1abbbc",
+                                        "id": "49222856-a7d4-446a-abe3-e3e45f11269d",
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
@@ -1221,6 +1223,13 @@
                             "children": {
                                 "true": [
                                     {
+                                        "id": "9d2dc7d2-315c-4817-89a3-fdd4a77aec22",
+                                        "command": "EVENT_WAIT",
+                                        "args": {
+                                            "time": 0.5
+                                        }
+                                    },
+                                    {
                                         "id": "1cc3a31a-9a0d-4e1d-8f85-d5a61368be1f",
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
@@ -1255,9 +1264,124 @@
                     "id": "721f8450-634a-4c46-80bb-650a6b8175a8",
                     "x": 0,
                     "y": 0
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "6697f1e0-2b45-4537-9978-81392fad22ef",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "e8d004fb-f3de-4b71-b883-25dcb6ada9c1",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "(It won't move...)"
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "2d763145-4795-4de5-bdba-8ca7d2dad662",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "64ef9ded-4caa-4924-a848-0aa99489af30",
+                    "x": 16,
+                    "y": 1
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "89e79dea-06a8-4792-8af5-f010f963d84e",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "7a847fcf-e12a-432b-bd93-c1844ab0c1c9",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Press the B button\nor X on the\nkeyboard",
+                                    "to switch between\nnight and day!"
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "aa20a0cb-bfec-4456-b747-b4930b3e8e57",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "6be4b7f6-06c7-47a3-b88b-3c40d6ceaa18",
+                    "x": 9,
+                    "y": 9
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "56ad2ee6-8637-47aa-9fae-df3f5a683b26",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "aef21c26-b687-4555-9099-c70c33457b6a",
+                    "x": 3,
+                    "y": 1
                 }
             ],
-            "triggers": []
+            "triggers": [
+                {
+                    "name": "",
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "4b465c0b-5081-49ae-96f3-eda819358d70",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "No turning back...",
+                                    "...cheater..."
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "66d44726-736b-4a0f-b641-7e9facc82261",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "id": "12f5056b-5347-4938-bb8d-4179821715be",
+                    "x": 2,
+                    "y": 17,
+                    "width": 2,
+                    "height": 1
+                }
+            ]
         },
         {
             "name": "Puzzle 1 (Light)",
@@ -1664,6 +1788,13 @@
                             "children": {
                                 "true": [
                                     {
+                                        "id": "747d05ff-3009-4081-8328-263d60b0fc22",
+                                        "command": "EVENT_WAIT",
+                                        "args": {
+                                            "time": 0.5
+                                        }
+                                    },
+                                    {
                                         "id": "72c77886-adde-4525-afc3-4b886977ad07",
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
@@ -1698,9 +1829,157 @@
                     "id": "bd661eae-d00a-4820-8b12-807c313d8bcf",
                     "x": 0,
                     "y": 0
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "1282ce55-9f44-4c5d-a7df-c937c8a05ca3",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [
+                        {
+                            "id": "f63c90f0-0d42-46a1-ad5d-5f2e8b7393f0",
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "2",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "id": "4b716c35-60a4-42ea-b664-4fcc5eba2934",
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        }
+                                    },
+                                    {
+                                        "id": "4deb2e69-3ba7-4154-82dc-299df62397b5",
+                                        "command": "EVENT_ACTOR_MOVE_TO",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "x": {
+                                                "type": "number",
+                                                "value": 2
+                                            },
+                                            "y": {
+                                                "type": "number",
+                                                "value": 0
+                                            },
+                                            "moveType": "horizontal",
+                                            "useCollisions": false
+                                        }
+                                    },
+                                    {
+                                        "id": "474fd7c2-86f3-4903-bc7e-cbb0cf59c181",
+                                        "command": "EVENT_END"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "id": "07738f71-562f-4ecf-94b7-5f8b9715e724",
+                                        "command": "EVENT_END"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "5b08a0d3-bd83-447d-840b-5f4176af495d",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "d008c2fb-d7cb-40cf-af7c-873189ba863f",
+                    "x": 2,
+                    "y": 16
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "dbb05915-1497-49e2-b566-81e24e73d876",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "59c85bca-6bbe-430e-903b-d225d6dcb368",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "You got it! Onto\nthe next puzzle!",
+                                    "Just remember that\nany changes to a\nlevel that's made",
+                                    "besides pulling a\nlever will be lost\nif you switch!"
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "0f2ba139-5c3d-4e08-ac0a-5dda3b9b25ee",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "0bd7919a-e399-4516-b5aa-efcc97809db2",
+                    "x": 9,
+                    "y": 9
                 }
             ],
-            "triggers": []
+            "triggers": [
+                {
+                    "name": "",
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "5306bdd7-135c-410d-9c3c-91e5e829edc7",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "No turning back...",
+                                    "...cheater..."
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "17b0599c-7458-4201-9576-0a4ea1d198ad",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "id": "e22a8bdd-f2c8-4ade-bfaf-a764545c8ec2",
+                    "x": 2,
+                    "y": 17,
+                    "width": 2,
+                    "height": 1
+                },
+                {
+                    "name": "",
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "49e1656b-7b65-4f78-9c61-86951bbddb77",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "id": "2ad3922b-0405-4bae-ba1d-622af45a2c95",
+                    "x": 16,
+                    "y": 0,
+                    "width": 2,
+                    "height": 1
+                }
+            ]
         },
         {
             "name": "Controls",
@@ -1760,7 +2039,7 @@
             "imageHeight": 144,
             "filename": "Controls.png",
             "inode": "101246304992",
-            "_v": 1643438283326
+            "_v": 1643478494549
         },
         {
             "id": "b711383b-fb47-41ff-a1d5-a024ff6381c9",
@@ -1771,7 +2050,7 @@
             "imageHeight": 144,
             "filename": "Dark Room Proto.png",
             "inode": "101246304864",
-            "_v": 1643437884179
+            "_v": 1643478494549
         },
         {
             "id": "ca0e3ba0-32d3-4b17-a302-3bc54a118e01",
@@ -1782,7 +2061,7 @@
             "imageHeight": 144,
             "filename": "Light Room Proto.png",
             "inode": "101246304736",
-            "_v": 1643437884178
+            "_v": 1643478494549
         },
         {
             "id": "1e35d8e0-cf96-436b-8c0a-33907680b8b5",
@@ -1793,7 +2072,7 @@
             "imageHeight": 160,
             "filename": "Title Screen(1).png",
             "inode": "101246304480",
-            "_v": 1643430704405
+            "_v": 1643478494549
         },
         {
             "id": "4db81931-fb81-4b8a-b91b-d48812937d6d",
@@ -1804,7 +2083,7 @@
             "imageHeight": 144,
             "filename": "Tutorial Room.png",
             "inode": "101246304608",
-            "_v": 1643433363082
+            "_v": 1643478494549
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -1815,7 +2094,7 @@
             "imageHeight": 144,
             "filename": "placeholder.png",
             "inode": "101246304256",
-            "_v": 1643429238105
+            "_v": 1643478494549
         }
     ],
     "spriteSheets": [
@@ -1826,7 +2105,7 @@
             "type": "static",
             "filename": "Dark Lever (Off).png",
             "inode": "101250499936",
-            "_v": 1643437873157
+            "_v": 1643478985887
         },
         {
             "id": "9d6e963a-7568-4a05-8511-779a465a1433",
@@ -1835,7 +2114,7 @@
             "type": "static",
             "filename": "Dark Lever (On).png",
             "inode": "101250499552",
-            "_v": 1643437873153
+            "_v": 1643478985890
         },
         {
             "id": "8969c5d1-d547-4764-a3b9-aedc1235abbf",
@@ -1844,7 +2123,7 @@
             "type": "static",
             "filename": "Dark Lil Fucker.png",
             "inode": "101250499104",
-            "_v": 1643433350921
+            "_v": 1643478494549
         },
         {
             "id": "1282ce55-9f44-4c5d-a7df-c937c8a05ca3",
@@ -1853,7 +2132,16 @@
             "type": "static",
             "filename": "Dark NPC.png",
             "inode": "101250499232",
-            "_v": 1643433350922
+            "_v": 1643478494549
+        },
+        {
+            "id": "dbb05915-1497-49e2-b566-81e24e73d876",
+            "name": "Dark Sign",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "Dark Sign.png",
+            "inode": "101250500256",
+            "_v": 1643481363165
         },
         {
             "id": "ea118c6c-3017-462c-bf16-fef9774891f5",
@@ -1862,7 +2150,7 @@
             "type": "static",
             "filename": "Invisible.png",
             "inode": "101250500064",
-            "_v": 1643440291439
+            "_v": 1643478494549
         },
         {
             "id": "56ad2ee6-8637-47aa-9fae-df3f5a683b26",
@@ -1871,7 +2159,7 @@
             "type": "static",
             "filename": "Light Lever (Off).png",
             "inode": "101250499680",
-            "_v": 1643437873157
+            "_v": 1643478985893
         },
         {
             "id": "4f79b625-4c53-434b-84cc-1ae61a0fcf67",
@@ -1880,7 +2168,7 @@
             "type": "static",
             "filename": "Light Lever (On).png",
             "inode": "101250499808",
-            "_v": 1643437873159
+            "_v": 1643478985881
         },
         {
             "id": "6697f1e0-2b45-4537-9978-81392fad22ef",
@@ -1889,7 +2177,7 @@
             "type": "static",
             "filename": "Light Lil Fucker.png",
             "inode": "101250498880",
-            "_v": 1643433350918
+            "_v": 1643478494550
         },
         {
             "id": "71f45310-e4f7-49d8-ab52-02a93df31355",
@@ -1898,7 +2186,16 @@
             "type": "static",
             "filename": "Light NPC.png",
             "inode": "101250499008",
-            "_v": 1643433350920
+            "_v": 1643478494550
+        },
+        {
+            "id": "89e79dea-06a8-4792-8af5-f010f963d84e",
+            "name": "Light Sign",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "Light Sign.png",
+            "inode": "101250500160",
+            "_v": 1643481363166
         },
         {
             "id": "a6af05b6-0cb4-4b46-8482-733800db13b2",
@@ -1907,7 +2204,7 @@
             "type": "static",
             "filename": "Mystery Man.png",
             "inode": "101250499456",
-            "_v": 1643436042877
+            "_v": 1643478494550
         },
         {
             "id": "b4833a1d-e042-4b97-b1be-9e22321f9f81",
@@ -1916,7 +2213,7 @@
             "type": "actor_animated",
             "filename": "Norbert (Animated).png",
             "inode": "101250499328",
-            "_v": 1643435355078
+            "_v": 1643478494550
         },
         {
             "id": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
@@ -1925,7 +2222,7 @@
             "type": "actor",
             "filename": "actor.png",
             "inode": "101250498560",
-            "_v": 1643429238105
+            "_v": 1643478494549
         },
         {
             "id": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
@@ -1934,7 +2231,7 @@
             "type": "actor_animated",
             "filename": "actor_animated.png",
             "inode": "101250498656",
-            "_v": 1643429238105
+            "_v": 1643478494549
         },
         {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -1943,7 +2240,7 @@
             "type": "static",
             "filename": "static.png",
             "inode": "101250498784",
-            "_v": 1643429238105
+            "_v": 1643478494550
         }
     ],
     "palettes": [
@@ -2092,14 +2389,10 @@
             "filename": "template.mod",
             "settings": {},
             "inode": "101248401408",
-            "_v": 1643429238104
+            "_v": 1643478494546
         }
     ],
     "variables": [
-        {
-            "id": "32678282-ce66-463b-94f9-3639275fa682__L0",
-            "name": "Local 0"
-        },
         {
             "id": "0",
             "name": "Variable 000"
@@ -2107,6 +2400,14 @@
         {
             "id": "1",
             "name": "Talk to tutorial"
+        },
+        {
+            "id": "32678282-ce66-463b-94f9-3639275fa682__L0",
+            "name": "Local 0"
+        },
+        {
+            "id": "2",
+            "name": "Light Lever 1 Off"
         }
     ],
     "settings": {
